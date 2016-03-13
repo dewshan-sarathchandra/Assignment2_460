@@ -6,7 +6,16 @@
  *
  * @package abc-sushi
  */
+function abc_sushi_enqueue_scripts(){
+	wp_enqueue_style('abc_sushi-css', get_template_directory_uri(). '/style.css');
+wp_enqueue_script('backstretch', get_stylesheet_directory_uri() . '/js/backstretch.js', array ('jquery'), '2.0.4', true );
 
+wp_enqueue_script('my-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array ('jquery'), '1.0.0', true );
+
+
+}
+add_action('wp_enqueue_scripts','abc_sushi_enqueue_scripts');
+// retrieved from https://slate.sheridancollege.ca/d2l/le/content/266318/viewContent/4243573/View //
 if ( ! function_exists( 'abc_sushi_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
