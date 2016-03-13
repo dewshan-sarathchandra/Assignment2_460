@@ -7,7 +7,7 @@
  * @package abc-sushi
  */
 function abc_sushi_enqueue_scripts(){
-	wp_enqueue_style('abc_sushi-css', get_template_directory_uri(). '/style.css');
+	wp_enqueue_style('abc_sushi', get_template_directory_uri(). '/style.css');
 wp_enqueue_script('backstretch', get_stylesheet_directory_uri() . '/js/backstretch.js', array ('jquery'), '2.0.4', true );
 
 wp_enqueue_script('my-scripts', get_stylesheet_directory_uri() . '/js/scripts.js', array ('jquery'), '1.0.0', true );
