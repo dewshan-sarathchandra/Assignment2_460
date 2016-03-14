@@ -17,7 +17,7 @@
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'abc-sushi' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'abc-sushi' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'artry-sushi' ), 'abc-sushi', '<a href="http://underscores.me/" rel="designer">Kariann Brown, Amrita Singh, Dewshan Sarathchndra</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'artry-sushi' ), 'Artsy', '<a href="http://underscores.me/" rel="designer">Kariann Brown, Amrita Singh, Dewshan Sarathchndra</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
