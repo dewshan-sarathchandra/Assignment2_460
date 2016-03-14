@@ -534,13 +534,13 @@ a {
 }
 
 a:visited {
-	color: purple;
+	color: yellow;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: orange;
 }
 
 a:focus {
@@ -551,7 +551,6 @@ a:hover,
 a:active {
 	outline: 0;
 }
-
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -560,6 +559,9 @@ a:active {
 	display: inline-block;
 	float: center;
 	width: 100%;
+	background-color: black;
+	font-family: 'Josefin Sans', sans-serif;
+	
 }
 
 .main-navigation ul {
@@ -571,31 +573,30 @@ a:active {
 }
 
 .main-navigation li {
-	float: center;
+	float: right;
 	position: relative;
-	padding-right: 8.1em;
-	background-color: black;
+	padding-left: 1em;
+	padding-right: 1em;
 	color: red;
-	width: 14.826em;
-	max-width:100%;
-	display: inline;
+	width: 10.5em;
+	display: inline-block;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 .main-navigation a {
 	display: inline-block;
 	text-decoration: none;
 	padding:1em;
-	color:white;
 	
-}
-.main-navigation a:hover{
-	color: grey;
-}
-.main-navigation a:visited{
-	
-	color: red;
 }
 
+.main-navigation a:visited{
+	
+	color: white;
+}
+.main-navigation a:hover{
+	color:red;
+}
 
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -654,28 +655,39 @@ site title
 
 
 .site-title{
-	padding: 1em;
-	float: center;
-	width:8em;
-	font-size:30px;
+	padding: 0em;
+	float: left;
+	width:5em;
+	height:1em;
+	font-size:40px;
 	background-color: black;
 	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+
 
 }
 
 .site-branding{
-	color: white;
-	
+	color: orange;
+	padding: 3em;
+
 }
 
 .site-description{
-	float: center;
-	padding: 1em;
+	padding-left: 0em;
+	padding-top:3em;
+	float: left;
 	font-size: 20px;
 	background-color: black;
-	width:30%;
 	margin: 0;
+	width: 70%;
+	font-family: 'Josefin Sans', sans-serif;
 }
+#masthead.site-header{
+	background-color: black;
+	height:12em;
+}
+
 
 
 /*-------------------------------
@@ -683,11 +695,12 @@ footer site info
 ----------------------------------*/
 .site-info{
 	
-	color:red;
 	margin: 2em;
-	float: right;
-	padding: 1em;
 	float: center;
+	padding: 1em;
+	float: right;
+	background-color:black;
+	color:white;
 	
 }
 
@@ -696,20 +709,26 @@ footer site info
 content area 
 -----------------------------*/
 
-/* just to have an idea about the content area i have selected the background color to be  black*/
+
 #primary.content-area{
 	float: right;
 	margin:0px;
 	padding-right:2em;
 	height: 40em;
 	width:100%;
-	background: black;
+	
+	
 	
 
 }
 
-p{
-color:white;}
+#recent-posts-3.widget.widget_recent_entries{
+	
+	width:40%;
+	background-color: pink;
+	float:right;
+}
+
 
 
 /* Small menu. */
