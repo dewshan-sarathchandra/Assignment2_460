@@ -573,12 +573,12 @@ a:active {
 .main-navigation li {
 	float: center;
 	position: relative;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-right: 8.1em;
 	background-color: black;
 	color: red;
 	width: 14.826em;
-	display: inline-block;
+	max-width:100%;
+	display: inline;
 }
 
 .main-navigation a {
