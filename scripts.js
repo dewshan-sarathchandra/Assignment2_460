@@ -1,2 +1,2 @@
-jQuery(document).ready(function($) { $.backstretch("NEW IMAGE http://dl.dropbox.com/u/515046/www/garfield-interior.jpg");
+jQuery(document).ready(function($) { $.backstretch("img/background.jpg");
 });
