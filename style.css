@@ -555,6 +555,7 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
 .main-navigation {
 	clear: both;
 	display: inline-block;
@@ -598,7 +599,6 @@ a:active {
 .main-navigation a:hover{
 	color:red;
 }
-
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
@@ -623,15 +623,17 @@ a:active {
 
 .main-navigation li:hover > a,
 .main-navigation li.focus > a {
+color:orange;
 }
 
-.main-navigation ul ul :hover > a,
+/*.main-navigation ul ul :hover > a,
 .main-navigation ul ul .focus > a {
-}
+color:green;
+}*/
 
-.main-navigation ul ul a:hover,
+/*.main-navigation ul ul a:hover,
 .main-navigation ul ul a.focus {
-}
+}*/
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
@@ -695,16 +697,18 @@ site title
 footer site info 
 ----------------------------------*/
 .site-info{
-	
-	margin: 2em;
+	padding:2em;
 	float: center;
-	padding: 1em;
 	float: right;
 	background-color:black;
 	color:white;
 	
 }
 
+#colophon.site-footer{
+	background-color:black;
+	height:5.5em
+}
 
 /*-----------------------------
 content area 
@@ -717,17 +721,34 @@ content area
 	padding-right:2em;
 	height: 40em;
 	width:100%;
-	
-	
-	
-
 }
 
 #recent-posts-3.widget.widget_recent_entries{
 	
-	width:40%;
+	width:30em;
 	background-color: pink;
 	float:right;
+}
+
+
+#main {
+width: 40em;
+height:20em;
+color:white;
+padding: 0 0 0 0;
+background: white;
+opacity: 0.7;
+float: left;
+border: 0 0 0 0; 
+background: black;
+}
+
+#main.site-main{
+	margin-top: 0.7em;
+	margin-left:0.5em;
+	padding-left:2em;
+	height:auto;
+	
 }
 
 
