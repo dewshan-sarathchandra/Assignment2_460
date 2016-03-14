@@ -647,6 +647,71 @@ a:active {
 .main-navigation .current-menu-ancestor > a {
 }
 
+/* -------------------------------------
+site title 
+--------------------------------*/
+
+
+
+.site-title{
+	padding: 1em;
+	float: center;
+	width:8em;
+	font-size:30px;
+	background-color: black;
+	margin: 0;
+
+}
+
+.site-branding{
+	color: white;
+	
+}
+
+.site-description{
+	float: center;
+	padding: 1em;
+	font-size: 20px;
+	background-color: black;
+	width:30%;
+	margin: 0;
+}
+
+
+/*-------------------------------
+footer site info 
+----------------------------------*/
+.site-info{
+	
+	color:red;
+	margin: 2em;
+	float: right;
+	padding: 1em;
+	float: center;
+	
+}
+
+
+/*-----------------------------
+content area 
+-----------------------------*/
+
+/* just to have an idea about the content area i have selected the background color to be  black*/
+#primary.content-area{
+	float: right;
+	margin:0px;
+	padding-right:2em;
+	height: 40em;
+	width:100%;
+	background: black;
+	
+
+}
+
+p{
+color:white;}
+
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
