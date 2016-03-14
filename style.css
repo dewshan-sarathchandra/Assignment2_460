@@ -577,21 +577,23 @@ a:active {
 	padding-right: 1em;
 	background-color: black;
 	color: red;
+	width: 14.826em;
+	display: inline-block;
 }
 
 .main-navigation a {
 	display: inline-block;
 	text-decoration: none;
-	padding:1.2em;
+	padding:1em;
 	color:white;
 	
 }
 .main-navigation a:hover{
-	color: red;
+	color: grey;
 }
 .main-navigation a:visited{
 	
-	color: grey;
+	color: red;
 }
 
 
