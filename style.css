@@ -942,6 +942,21 @@ background: black;
 
 .bypostauthor {
 	display: block;
+	float:left;
+	width: 20em;
+}
+
+#comment{
+	width: 20em;
+	height: 5em;
+	
+	
+}
+
+#respond.comment-respond{
+	width: auto;
+	
+
 }
 
 /*--------------------------------------------------------------
