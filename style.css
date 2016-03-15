@@ -683,7 +683,7 @@ site title
 	font-size: 20px;
 	background-color: black;
 	margin: 0;
-	width: 70%;
+	width: 80%;
 	font-family: 'Josefin Sans', sans-serif;
 }
 #masthead.site-header{
@@ -737,7 +737,7 @@ height:20em;
 color:white;
 padding: 0 0 0 0;
 background: white;
-opacity: 0.7;
+opacity: 0.85;
 float: left;
 border: 0 0 0 0; 
 background: black;
