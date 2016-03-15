@@ -15,7 +15,6 @@ wp_enqueue_script('my-scripts', get_stylesheet_directory_uri() . '/js/scripts.js
 
 }
 add_action('wp_enqueue_scripts','abc_sushi_enqueue_scripts');
-// retrieved from https://slate.sheridancollege.ca/d2l/le/content/266318/viewContent/4243573/View //
 if ( ! function_exists( 'abc_sushi_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -135,30 +134,78 @@ function abc_sushi_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'abc_sushi_scripts' );
 
+/**calling the file in charge of theme options
+* retrieved from https://slate.sheridancollege.ca/d2l/le/content/266318/viewContent/4305729/View 
+*/ 
 
 require get_stylesheet_directory().'/inc/options.php';
-/* all the functions below are creating errors */
+
+
+
+
+
 /**
  * Implement the Custom Header feature.
- 
-require get_template_directory() . '/inc/custom-header.php';*/
+ */
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
- 
-require get_template_directory() . '/inc/template-tags.php';*/
+ */
+require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
- 
-require get_template_directory() . '/inc/extras.php'; */
+ */
+require get_template_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.
- 
-require get_template_directory() . '/inc/customizer.php'; */
+ */
+require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/*-------------------------------
+	shortcodes 
+--------------------------------*/
+/**
+*
+*adding excerpt's code retrieved from  :https://codex.wordpress.org/Customizing_the_Read_More
+*/
+
+the_content($more_link_text, $trip_teaser);
+add_filter('the_content_more_link', 'modify_read_more_link');
+function modify_read_more_link(){
+	return '<a class= more"-link" href=" ' . get_permalink() . ' ">continue reading </a>';
+}
+
+
+/**
+*
+*gravatar code taken from http://codeplaylove.com/add-a-custom-gravatar/  
+*/
+
+add_filter( 'avatar_defaults', 'cd_custom_gravatar' );
+ 
+function cd_custom_gravatar ($avatar_defaults) {
+    $myavatar = 'http://phoenix.sheridanc.on.ca/~ccit3485/wp-content/themes/abc-sushi/img/sushi-conveyor-1549001.jpg';
+    $avatar_defaults[$myavatar] = __( 'Custom Gravatar', 'my dog' );
+    return $avatar_defaults;
+}
+
+/**
+* adding google maps to contact us page, code retrieved from https://digwp.com/2010/01/google-maps-shortcode/
+*/
+function fn_googleMaps($atts, $content = null) {
+   extract(shortcode_atts(array(
+      "width" => '640',
+      "height" => '480',
+      "src" => ''
+   ), $atts));
+   return '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.$src.'&amp;output=embed"></iframe>';
+}
+add_shortcode("googlemap", "fn_googleMaps");
