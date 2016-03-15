@@ -134,6 +134,9 @@ function abc_sushi_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'abc_sushi_scripts' );
+
+
+require get_stylesheet_directory().'/inc/options.php';
 /* all the functions below are creating errors */
 /**
  * Implement the Custom Header feature.
