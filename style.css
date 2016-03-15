@@ -177,8 +177,8 @@ input,
 optgroup,
 select,
 textarea {
-	color: inherit;
-	font: inherit;
+	color: black;
+	font-family: sans-serif;
 	margin: 0;
 }
 
@@ -279,6 +279,10 @@ textarea {
 	line-height: 1.5;
 }
 
+.site-content {
+	font-size: 1.125em;
+	line-height: 1.6em;
+}
 h1,
 h2,
 h3,
@@ -532,6 +536,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: royalblue;
+	
 }
 
 a:visited {
