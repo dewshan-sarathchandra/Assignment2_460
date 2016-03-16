@@ -560,7 +560,8 @@ a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-
+/* styles the main menu for desktop version.
+Displays the main menu in a line with black background and white text. */
 .main-navigation {
 	clear: both;
 	display: inline-block;
@@ -590,6 +591,7 @@ a:active {
 	font-family: 'Josefin Sans', sans-serif;
 }
 
+
 .main-navigation a {
 	display: inline-block;
 	text-decoration: none;
@@ -597,12 +599,21 @@ a:active {
 	
 }
 
+/* Chnages the color of visited links to white  */
 .main-navigation a:visited{
 	
 	color: white;
 }
+
+/* changes the color of the link to orange when the cursor is placed on top of the link*/ 
 .main-navigation a:hover{
-	color:red;
+	color:orange;
+}
+
+/* shifts the submenu down for easy access of the main menu items */
+.sub-menu{
+margin-top: 2em;
+padding-top:2em;
 }
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -660,14 +671,14 @@ color:green;
 site title 
 --------------------------------*/
 
-
+/* Style changes to site name */
 
 .site-title{
 	padding: 0em;
 	float: left;
-	width:5em;
+	width:8em;
 	height:1em;
-	font-size:40px;
+	font-size:30px;
 	background-color: black;
 	margin: 0;
 	font-family: 'Josefin Sans', sans-serif;
@@ -675,6 +686,7 @@ site title
 
 }
 
+/* styles the tag line of the site */
 .site-branding{
 	color: orange;
 	padding: 3em;
@@ -688,14 +700,13 @@ site title
 	font-size: 20px;
 	background-color: black;
 	margin: 0;
-	width: 80%;
+	width: 70%;
 	font-family: 'Josefin Sans', sans-serif;
 }
 #masthead.site-header{
 	background-color: black;
 	height:12em;
 }
-
 
 
 /*-------------------------------
@@ -718,44 +729,44 @@ footer site info
 /*-----------------------------
 content area 
 -----------------------------*/
-
+/* aligns the content area of the site */
 
 #primary.content-area{
+	font-family: 'Josefin Sans', sans-serif;
 	float: right;
 	margin:0px;
 	padding-right:2em;
-	height: 40em;
-	width:100%;
+	width:90%;
+	font-size:12px;
 }
 
 #recent-posts-3.widget.widget_recent_entries{
 	
 	width:30em;
-	background-color: pink;
+	background-color: black;
 	float:right;
 }
 
 
 #main {
-width: 40em;
-height:20em;
+	font-family: 'Josefin Sans', sans-serif;
+
 color:white;
-padding: 0 0 0 0;
-background: white;
-opacity: 0.85;
+padding: 4em;
+opacity: 0.95;
 float: left;
 border: 0 0 0 0; 
 background: black;
 }
 
 #main.site-main{
-	margin-top: 0.7em;
+	margin-top: 9em;
 	margin-left:0.5em;
 	padding-left:2em;
+	width: 80%;
 	height:auto;
 	
 }
-
 
 
 /* Small menu. */
