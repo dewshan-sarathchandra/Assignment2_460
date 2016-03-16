@@ -29,7 +29,24 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
+		
+		 $query = new WP_Query( array('post_type' => 'movie-reviews', 'posts_per_page' => 5 ) );
+			<?php if ( $query->have_posts() ) : ?>
+        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <?php while ($query->have_posts()) : $query->the_post(); ?>
 
+            <h1 class="entry-title"><?php the_title(); ?></h1> <!-- Queried Post Title -->
+            <div class="entry-content">
+                <?php the_excerpt(); ?> <!-- Queried Post Excerpts -->
+            </div><!-- .entry-content -->
+
+        <?php endwhile; //resetting the post loop ?>
+
+        </div><!-- #post-<?php the_ID(); ?> -->
+         <?php
+        wp_reset_postdata(); //resetting the post query
+        endif;
+        ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
