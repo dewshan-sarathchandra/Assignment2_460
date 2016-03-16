@@ -170,18 +170,8 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /*-------------------------------
-	shortcodes 
+	added features 
 --------------------------------*/
-/**
-*
-*adding excerpt's code retrieved from  :https://codex.wordpress.org/Customizing_the_Read_More
-*/
-
-the_content($more_link_text, $trip_teaser);
-add_filter('the_content_more_link', 'modify_read_more_link');
-function modify_read_more_link(){
-	return '<a class= more"-link" href=" ' . get_permalink() . ' ">continue reading </a>';
-}
 
 
 /**
@@ -197,15 +187,14 @@ function cd_custom_gravatar ($avatar_defaults) {
     return $avatar_defaults;
 }
 
-/**
-* adding google maps to contact us page, code retrieved from https://digwp.com/2010/01/google-maps-shortcode/
-*/
-function fn_googleMaps($atts, $content = null) {
-   extract(shortcode_atts(array(
-      "width" => '640',
-      "height" => '480',
-      "src" => ''
-   ), $atts));
-   return '<iframe width="'.$width.'" height="'.$height.'" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="'.$src.'&amp;output=embed"></iframe>';
+
+/* Add Signature Image after single post code taken from http://www.1dogwoof.com/2013/11/how-to-add-a-signature-to-all-wordpress-posts.html
+and image taken from http://www.freeimages.com/search/sushi?free=1*/ 
+
+add_filter('the_content','add_signature', 1);
+function add_signature($text) {
+ global $post;
+ if(($post->post_type == 'page')) 
+    $text .= '<div class="signature"><img src="http://phoenix.sheridanc.on.ca/~ccit3485/wp-content/themes/abc-sushi/img/i-love-sushi.jpg"></div>';
+    return $text;
 }
-add_shortcode("googlemap", "fn_googleMaps");
