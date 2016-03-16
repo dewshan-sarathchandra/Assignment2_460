@@ -169,11 +169,10 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-/*-------------------------------
-	added features 
---------------------------------*/
 
-
+/*-------------------------------------- 
+added features 
+---------------------------------------*/
 /**
 *
 *gravatar code taken from http://codeplaylove.com/add-a-custom-gravatar/  
@@ -183,9 +182,10 @@ add_filter( 'avatar_defaults', 'cd_custom_gravatar' );
  
 function cd_custom_gravatar ($avatar_defaults) {
     $myavatar = 'http://phoenix.sheridanc.on.ca/~ccit3485/wp-content/themes/abc-sushi/img/sushi-conveyor-1549001.jpg';
-    $avatar_defaults[$myavatar] = __( 'Custom Gravatar', 'my dog' );
+    $avatar_defaults[$myavatar] = __( 'Custom Gravatar', 'sushi' );
     return $avatar_defaults;
 }
+
 
 
 /* Add Signature Image after single post code taken from http://www.1dogwoof.com/2013/11/how-to-add-a-signature-to-all-wordpress-posts.html
@@ -198,3 +198,30 @@ function add_signature($text) {
     $text .= '<div class="signature"><img src="http://phoenix.sheridanc.on.ca/~ccit3485/wp-content/themes/abc-sushi/img/i-love-sushi.jpg"></div>';
     return $text;
 }
+
+
+function food_reviews_init() {
+    $args = array(
+      'label' => 'Food Reviews',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'food-reviews'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-heart',
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes',)
+        );
+    register_post_type( 'food-reviews', $args );
+}
+add_action( 'init', 'food_reviews_init' );
